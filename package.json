@@ -1,6 +1,6 @@
 {
 	"name": "canvas-pie-chart",
-	"version": "1.0.2",
+	"version": "1.0.7",
 	"description": "Canvas based pie chart generator.",
 	"main": "dist/index.js",
 	"repository": {

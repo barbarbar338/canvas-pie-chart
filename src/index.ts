@@ -1,4 +1,10 @@
-import { createCanvas, Canvas, CanvasRenderingContext2D } from "canvas";
+import {
+    createCanvas,
+    Canvas,
+    CanvasRenderingContext2D,
+    registerFont,
+} from "canvas";
+registerFont(__dirname + "/../Raleway.ttf", { family: "Raleway" });
 
 export class PieChart {
     private _CANVAS: Canvas;
@@ -63,7 +69,7 @@ export class PieChart {
 
     private drawText(size: number, label: string, color: string): void {
         const oldLength = label.length;
-        const font = `bold ${Math.floor(this._WIDTH / 30)}px sans-serif`;
+        const font = `bold ${Math.floor(this._WIDTH / 30)}px Raleway`;
         this._CTX.font = font;
         let fontWidth = this._CTX.measureText(label).width;
         while (fontWidth > this._WIDTH / 3) {
